@@ -1,13 +1,9 @@
-import dynamic from 'next/dynamic';
+import dynamic from "next/dynamic";
 
-const WhaleCayMap = dynamic(() => import('../src/WhaleCayMap'), {
-  ssr: false, // Important for Leaflet to work
+const WhaleCayMap = dynamic(() => import("../components/WhaleCayMap"), {
+  ssr: false,
 });
 
-export default function Home() {
-  return (
-    <div style={{ height: '100vh', width: '100vw' }}>
-      <WhaleCayMap />
-    </div>
-  );
+export default function HomePage() {
+  return <WhaleCayMap />;
 }
